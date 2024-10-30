@@ -109,7 +109,7 @@ Redireciona uma requisição para uma API externa e retorna a resposta ao client
   ```json
   {
     "erpUrl": "https://api-do-erp.com/v1/resource",
-    "data": "{"ttPrecos":[{"SKU":"16520"}]}"
+    "data": "{"bodyExperadoNaAPI":[{"value":"16520"}]}"
   }
   ```
 
@@ -143,7 +143,7 @@ Redireciona uma requisição para uma API externa e retorna a resposta ao client
      ```json
      {
        "erpUrl": "https://api-do-erp.com/v1/resource",
-       "data": "{"ttPrecos":[{"SKU":"16520"}]}"
+       "data": "{"bodyExperadoNaAPI":[{"value":"16520"}]}"
      }
      ```
 
