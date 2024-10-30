@@ -1,11 +1,11 @@
 
 # Node.js API Middleware
 
-Este projeto é um **middleware** desenvolvido em **Node.js** que funciona como uma ponte entre um aplicativo e APIs de ERP. Ele recebe requisições com a URL e os dados do ERP e encaminha essas informações. Também fornece **endpoints para consulta do IP de saída** e um **heartbeat** para verificar o status da aplicação.
+Este projeto é um **middleware** desenvolvido em **Node.js** para **redirecionar requisições para APIs externas**. Ele é ideal para cenários onde se deseja facilitar a **liberação de acesso a servidores protegidos**. Ao invés de liberar o acesso por VPN para todas as pessoas, basta liberar o acesso ao **IP fixo** deste middleware. Assim, ele faz o redirecionamento seguro das informações para as APIs externas desejadas.
 
 ## Funcionalidades
 
-- **API Bridge**: Redireciona requisições para APIs externas, como ERPs.
+- **API Bridge**: Redireciona requisições para APIs externas de forma controlada.
 - **Proteção com API Key**: Apenas clientes autorizados podem acessar os endpoints.
 - **Consulta de IP de saída**: Permite verificar o IP de saída do servidor via `httpbin.org/ip`.
 - **Healthcheck**: Endpoint simples para verificar se a aplicação está ativa.
@@ -98,7 +98,7 @@ Verifica o **IP público de saída** da aplicação, utilizando a API externa `h
 
 ### 3. API Bridge para ERP
 
-Redireciona uma requisição para o ERP e retorna a resposta ao cliente.
+Redireciona uma requisição para uma API externa e retorna a resposta ao cliente.
 
 - **URL**: `/api/bridge`
 - **Método**: `POST`
@@ -160,6 +160,6 @@ node-api-middleware/
 
 ## Conclusão
 
-Este projeto fornece um middleware simples em **Node.js** com proteção por **API Key**, um **heartbeat** para verificação de status e um **método para consultar o IP de saída**. Ele pode ser facilmente adaptado para integrar-se a APIs de ERP e outros serviços externos.
+Este projeto fornece um middleware simples em **Node.js** com proteção por **API Key**, um **heartbeat** para verificação de status e um **método para consultar o IP de saída**. Ele pode ser utilizado para redirecionar requisições de forma segura, facilitando o acesso a servidores protegidos sem a necessidade de liberar VPN para todos os usuários.
 
 Se você encontrar algum problema ou precisar de ajuda, é só avisar!
